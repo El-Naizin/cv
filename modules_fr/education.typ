@@ -1,25 +1,34 @@
-#import "../brilliant-CV/template.typ": *
+// Imports
+#import "@preview/brilliant-cv:2.0.3": cvSection, cvEntry, hBar
+#let metadata = toml("../metadata.toml")
+#let cvSection = cvSection.with(metadata: metadata)
+#let cvEntry = cvEntry.with(metadata: metadata)
+
 
 #cvSection("Formation")
 
 #cvEntry(
-    title: [Master en Science des Données],
-    society: [Université de Californie à Los Angeles],
-    date: [2018 - 2020],
-    location: [USA],
-    description: list(
-      [Thèse : Prédiction du taux de désabonnement des clients dans l'industrie des télécommunications en utilisant des algorithmes d'apprentissage automatique et l'analyse de réseau],
-      [Cours : Systèmes et technologies Big Data #hBar() Exploration et exploitation de données #hBar() Traitement du langage naturel]
-    )
+  title: [Université de Technologie de Compiègne],
+  society: [Diplome d'Ingénieur en Informatique],
+  date: [2021 - 2024],
+  location: [Compiègne, France],
+  logo: image("../src/logos/utc.svg"),
+  description: list(
+    [Implémentation pendant mon temps libre d'algorithmes comme la triangulation de delaunay en complexité O(n log(n))],
+    [Point d'attention sur le *C/C++* et le *Rust*],
+    [Apprentissage d'outils théoriques, comme la programmation par contraintes, ou la programmation linéaire]
+  ),
 )
 
 #cvEntry(
-    title: [Bachelors en Informatique],
-    society: [Université de Californie à Los Angeles],
-    date: [2014 - 2018],
-    location: [USA],
-    description: list(
-      [Thèse : Exploration de l'utilisation des algorithmes d'apprentissage automatique pour la prédiction des prix des actions : une étude comparative des modèles de régression et de séries chronologiques],
-      [Cours : Systèmes de base de données #hBar() Réseaux informatiques #hBar() Génie logiciel #hBar() Intelligence artificielle]
-    )
+  title: [IUT de La Rochelle],
+  society: [DUT Informatique],
+  date: [2019 - 2021],
+  location: [La Rochelle, France],
+  logo: image("../src/logos/larochelle.png"),
+  description: list(
+    [Spécialisation dans la programmation systèmes],
+    [Apprentissage du développement kernel, POSIX, assembleur, graphismes 3D, et Drivers],
+    [Apprentissage en profondeur du C/C++, et début de Rust],
+  ),
 )

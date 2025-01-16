@@ -1,31 +1,34 @@
-#import "../brilliant-CV/template.typ": *
+// Imports
+#import "@preview/brilliant-cv:2.0.3": cvSection, cvEntry, hBar
+#let metadata = toml("../metadata.toml")
+#let cvSection = cvSection.with(metadata: metadata)
+#let cvEntry = cvEntry.with(metadata: metadata)
+
 
 #cvSection("Education")
 
 #cvEntry(
-    title: [Computer Science Engineering degree],
-    society: [Université de Technologie de Compiègne],
-    date: [2021 - 2024],
-    location: [Compiègne, France],
-    //TODO: logo
-    logo: "../src/logos/utc.svg",
-    description: list(
-      [Developped a more in-depth understanding of Computer Science theory],
-      [Learned new theoretical tools such as Constraint programming, Linear programming], //TODO: développer
-      [Focused on embedded systems, software development, and cyber-security ],
-    )
+  title: [Université de Technologie de Compiègne],
+  society: [Computer Science Engineering diploma (Masters equivalent)],
+  date: [2021 - 2024],
+  location: [Compiègne, France],
+  logo: image("../src/logos/utc.svg"),
+  description: list(
+    [During my free time, I implemented algorithms I thought were interesting, like the Delaunay Triangulation in $O(n log(n))$ complexity],
+    [Focused on *C/C++* and *Rust*],
+    [Learned about and used theoretical tools, like constraint programing and linear programming],
+  ),
 )
 
 #cvEntry(
-    title: [Technical University diploma in Computer Science],
-    society: [IUT of La Rochelle],
-    date: [2019 - 2021],
-    location: [La Rochelle, France],
-    //TODO: logo
-    logo: "../src/logos/larochelle.png",
-    description: list(
-      [Specialised in systems programming],
-      [Learned kernel programming, POSIX, Assembly, 3D graphics, Drivers],
-      [Focused on C/C++ and Java development],
-    )
+  title: [IUT de La Rochelle],
+  society: [Computer Science DUT (Bachelors equivalent)],
+  date: [2019 - 2021],
+  location: [La Rochelle, France],
+  logo: image("../src/logos/larochelle.png"),
+  description: list(
+    [Specialized in systems programming],
+    [Learned kernel development, POSIX, assembly, 3D graphics (with *Vulkan*), and Drivers],
+    [Learned C/C++ in depth at school, and started learning Rust in my free time, dabbled with functionnal programming languages],
+  ),
 )

@@ -1,36 +1,22 @@
-#import "../brilliant-CV/template.typ": *
+// Imports
+#import "@preview/brilliant-cv:2.0.3": cvSection, cvSkill, hBar
+#let metadata = toml("../metadata.toml")
+#let cvSection = cvSection.with(metadata: metadata)
 
-#set par(
-    leading: 100pt,
-)
 
 #cvSection("Skills")
 
 #cvSkill(
   type: [Languages],
-  info: [Fluent English #hBar() Fluent French #hBar() Learning German]
+  info: [English #hBar() French #hBar() Chinese],
 )
-
-#v(7pt)
-
 
 #cvSkill(
   type: [Tech Stack],
-  info: [Rust #hBar() Python #hBar() C/C++ #hBar() Java #hBar() And More]
+  info: [Tableau #hBar() Python (Pandas/Numpy) #hBar() PostgreSQL],
 )
-
-#v(7pt)
-
-
-#cvSkill(
-  type: [Misc.],
-  info: [Latex #hBar() Typst #hBar() VIM #hBar() Proficient with Linux, MacOS and Windows]
-)
-
-#v(7pt)
-
 
 #cvSkill(
   type: [Personal Interests],
-  info: [Swimming #hBar() Operating Systems #hBar() Cooking and Baking]
+  info: [Swimming #hBar() Cooking #hBar() Reading],
 )

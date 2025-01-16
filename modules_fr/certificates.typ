@@ -21,6 +21,6 @@
 
 #cvHonor(
   date: [],
-  title: [SQL Fundamentals Track],
-  issuer: [Datacamp],
+  title: [Bases de données et requêtes SQL],
+  issuer: [OpenClassrooms],
 )
